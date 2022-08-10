@@ -15,7 +15,7 @@ public class ExceptionHandlerAdvice {
 
     @ExceptionHandler(UnauthorizedUser.class)
     public ResponseEntity<String> unauthorizedUser(UnauthorizedUser exception) {
-        return new ResponseEntity<>(exception.toString(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(exception.toString(), HttpStatus.UNAUTHORIZED);
     }
 
 }

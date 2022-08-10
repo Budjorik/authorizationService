@@ -19,9 +19,9 @@ public class AuthorizationConfiguration {
         return new AuthorizationService(userRepository);
     }
 
-    @Bean
-    public AuthorizationController authorizationController(AuthorizationService service) {
-        return new AuthorizationController(service);
-    }
+//    @Bean
+//    public AuthorizationController authorizationController(AuthorizationService service) {
+//        return new AuthorizationController(service);
+//    }
 
 }

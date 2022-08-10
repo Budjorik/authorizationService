@@ -8,13 +8,15 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class UserRepository {
-    public ConcurrentHashMap<String, User> users;
+    public ConcurrentHashMap<String, User> users = new ConcurrentHashMap<>();
 
     public UserRepository() {
         users.put("Ivan", new User("Ivan", "111",
                 List.of(Authorities.READ, Authorities.WRITE)));
         users.put("Olga", new User("Olga", "777",
                 List.of(Authorities.READ, Authorities.WRITE, Authorities.DELETE)));
+        users.put("Petr", new User("Petr", "000",
+                null));
     }
 
     public void addUser(User user) {
